@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  ruby_dev:
+    build: ./buying
+    container_name: ruby_container
+    ports:
+      - "3006:3006"
+    volumes:
+      - ./:/app/buying
