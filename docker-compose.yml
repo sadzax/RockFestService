@@ -1,9 +1,9 @@
 version: "3.7"
 services:
   ruby_dev:
-    build: ./buying
-    container_name: ruby_container
+    build: ./buying_app
+    container_name: service_03_buying
     ports:
       - "3006:3006"
     volumes:
-      - ./:/app/buying
+      - ./:/usr/src/buying_app
