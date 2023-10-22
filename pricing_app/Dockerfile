@@ -1,4 +1,4 @@
-FROM ruby:2.7.0
+FROM ruby:2.6
 
 # установка библиотек для работы приложения (сейчас отсутствуют)
 RUN apt-get update -qq && apt-get install -y locales
