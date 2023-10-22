@@ -1,0 +1,15 @@
+<!-- app/views/buying/new.html.erb -->
+
+<h1></h1><br>
+<h1>Пожалуйста, введите свои данные</h1>
+
+<%= form_with(url: buy_path, method: :post, local: true) do |form| %>
+  
+  <%= form.text_field :name, placeholder: 'Ваше имя' %> <br>
+  <%= form.number_field :age, placeholder: 'Возраст' %> <br>
+  <%= form.text_field :doc_type, placeholder: 'Вид документа' %> <br>
+  <%= form.text_field :doc_num, placeholder: 'Номер документа' %> <br>
+  <%= form.text_field :id_book, placeholder: 'Номер брони' %> <br>
+
+  <%= form.submit 'Купить билет' %>
+<% end %>
