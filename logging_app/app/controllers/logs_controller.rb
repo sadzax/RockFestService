@@ -4,7 +4,7 @@
 class LogsController < ApplicationController
   before_action :set_log, only: %i[show edit update destroy]
 
-  # GET /logs or /logs.json
+  # GET /logs or /logs.json, поддерживает фильтрацию по параметрам
   def index
     result = Log.all
     result = result.where(name: params[:name]) unless params[:name].nil?
