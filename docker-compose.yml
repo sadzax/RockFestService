@@ -1,11 +1,11 @@
 version: "3"
 services:
   pricing_app:
-    build: ./prices_serviice # ???
+    build: ./pricing_app
     ports:
       - '3003:3003'
     volumes:
-      - ./prices_serviice/:/usr/src/prices_serviice
+      - ./pricing_app/:/usr/src/pricing_app
   booking_app:
     build: ./booking_app
     ports: 
@@ -19,13 +19,13 @@ services:
     ports:
       - "3006:3006"
     volumes:
-      - ./:/usr/src/buying_app
+      - ./buying_app/:/usr/src/buying_app
   logging_app:
     build: ./logging_app
     ports:
       - "3007:3007"
     volumes:
-      - ./:/usr/src/logging_app
+      - ./logging_app:/usr/src/logging_app
 
 volumes:
   redis:
