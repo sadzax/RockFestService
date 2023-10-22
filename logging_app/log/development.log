@@ -1,0 +1,2159 @@
+Started GET "/" for 172.25.0.1 at 2023-10-20 14:34:25 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 22.2ms | Allocations: 508)
+Completed 200 OK in 35ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 4217)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTickets (20231020143748)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTickets (20231020143748)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "id_ticket" integer, "category" varchar, "doc_type" varchar, "doc_num" integer, "date" datetime, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231020143748"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-10-20 14:39:42.627732"], ["updated_at", "2023-10-20 14:39:42.627732"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddBlockedToTickets (20231021112738)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "tickets" ADD "blocked" boolean[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231021112738"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.25.0.1 at 2023-10-21 12:08:03 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.1ms | Allocations: 349)
+Completed 200 OK in 22ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 2576)
+
+
+Started GET "/enter" for 172.25.0.1 at 2023-10-21 12:08:09 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/enter"):
+  
+Started GET "/enter" for 172.25.0.1 at 2023-10-21 12:09:13 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (uninitialized constant TicketsController
+Did you mean?  TicketController):
+  
+Started GET "/enter" for 172.25.0.1 at 2023-10-21 12:10:10 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+Completed 500 Internal Server Error in 2ms (Allocations: 1018)
+
+
+  
+SyntaxError (/usr/src/app/services/ticket_service.rb:69: syntax error, unexpected tIDENTIFIER, expecting ')'
+                    blocked: false)
+                    ^~~~~~~
+/usr/src/app/services/ticket_service.rb:77: syntax error, unexpected tIDENTIFIER, expecting ')'
+                        blocked: false)
+                        ^~~~~~~
+/usr/src/app/services/ticket_service.rb:81: syntax error, unexpected end-of-input, expecting end):
+  
+app/services/ticket_service.rb:69: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/services/ticket_service.rb:77: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/services/ticket_service.rb:81: syntax error, unexpected end-of-input, expecting end
+app/services/ticket_service.rb:69: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/services/ticket_service.rb:77: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/services/ticket_service.rb:81: syntax error, unexpected end-of-input, expecting end
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter" for 172.25.0.1 at 2023-10-21 12:11:38 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 930)
+
+
+  
+SyntaxError (/usr/src/app/services/ticket_service.rb:77: syntax error, unexpected tIDENTIFIER, expecting ')'
+                        blocked: false)
+                        ^~~~~~~
+/usr/src/app/services/ticket_service.rb:81: syntax error, unexpected end-of-input, expecting end):
+  
+app/services/ticket_service.rb:77: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/services/ticket_service.rb:81: syntax error, unexpected end-of-input, expecting end
+app/services/ticket_service.rb:77: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/services/ticket_service.rb:81: syntax error, unexpected end-of-input, expecting end
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter" for 172.25.0.1 at 2023-10-21 12:11:53 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 731)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/services/ticket_service.rb:7:in `initialize'
+app/controllers/tickets_controller.rb:3:in `new'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:13:00 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+Completed 500 Internal Server Error in 0ms (Allocations: 428)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/services/ticket_service.rb:7:in `initialize'
+app/controllers/tickets_controller.rb:3:in `new'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:13:03 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+Completed 500 Internal Server Error in 0ms (Allocations: 427)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/services/ticket_service.rb:7:in `initialize'
+app/controllers/tickets_controller.rb:3:in `new'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:13:33 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms | Allocations: 4057)
+
+
+  
+NoMethodError (undefined method `blocked' for nil:NilClass):
+  
+app/services/ticket_service.rb:49:in `check_blocked'
+app/services/ticket_service.rb:13:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:14:37 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.8ms | Allocations: 3660)
+
+
+  
+NoMethodError (undefined method `blocked' for nil:NilClass):
+  
+app/services/ticket_service.rb:50:in `check_blocked'
+app/services/ticket_service.rb:13:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:15:02 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 3325)
+
+
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:15:28 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.8ms | Allocations: 4071)
+
+
+  
+NameError (undefined local variable or method `my_ticket' for #<TicketService:0x000056127dd137c0>
+Did you mean?  @my_ticket):
+  
+app/services/ticket_service.rb:42:in `check_status'
+app/services/ticket_service.rb:63:in `update_ticket'
+app/services/ticket_service.rb:16:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:15:47 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms | Allocations: 3650)
+
+
+  
+NoMethodError (undefined method `status' for nil:NilClass):
+  
+app/services/ticket_service.rb:42:in `check_status'
+app/services/ticket_service.rb:63:in `update_ticket'
+app/services/ticket_service.rb:16:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:16:10 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms | Allocations: 3651)
+
+
+  
+NoMethodError (undefined method `status' for nil:NilClass):
+  
+app/services/ticket_service.rb:43:in `check_status'
+app/services/ticket_service.rb:63:in `update_ticket'
+app/services/ticket_service.rb:16:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:17:28 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:69:in `update_ticket'
+  [1m[36mTicket Create (2.9ms)[0m  [1m[32mINSERT INTO "tickets" ("id_ticket", "category", "doc_type", "doc_num", "date", "status", "created_at", "updated_at", "blocked") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 1], ["category", "VIP"], ["doc_type", "passport"], ["doc_num", 22], ["date", "2023-10-21 00:00:00"], ["status", "in"], ["created_at", "2023-10-21 12:17:28.423202"], ["updated_at", "2023-10-21 12:17:28.423202"], ["blocked", 0]]
+  ↳ app/services/ticket_service.rb:69:in `update_ticket'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:69:in `update_ticket'
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 8.8ms | Allocations: 12874)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/enter?id_ticket=1&category=fan" for 172.25.0.1 at 2023-10-21 12:19:07 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"fan"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1015)
+
+
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTicket Update (0.3ms)[0m  [1m[33mUPDATE "tickets" SET "updated_at" = ?, "blocked" = ? WHERE "tickets"."id" = ?[0m  [["updated_at", "2023-10-21 12:19:32.508272"], ["blocked", 1], ["id", 1]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTicket Load (1.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:19:45 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 998)
+
+
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:20:21 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+Completed 500 Internal Server Error in 5ms (Allocations: 2188)
+
+
+  
+NameError (uninitialized constant TicketSiteAdapter::HTTPClient):
+  
+app/services/ticket_site_adapter.rb:17:in `create_client'
+app/services/ticket_site_adapter.rb:8:in `initialize'
+app/services/ticket_service.rb:32:in `new'
+app/services/ticket_service.rb:32:in `get_ticket_info'
+app/services/ticket_service.rb:12:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:25:35 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 7826)
+
+
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTicket Update (1.5ms)[0m  [1m[33mUPDATE "tickets" SET "updated_at" = ?, "blocked" = ? WHERE "tickets"."id" = ?[0m  [["updated_at", "2023-10-21 12:25:51.238974"], ["blocked", 0], ["id", 1]]
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:25:54 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:77:in `update_ticket'
+  [1m[36mTicket Update (1.5ms)[0m  [1m[33mUPDATE "tickets" SET "status" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["status", "out"], ["updated_at", "2023-10-21 12:25:54.197927"], ["id", 1]]
+  ↳ app/services/ticket_service.rb:77:in `update_ticket'
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:77:in `update_ticket'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 6.5ms | Allocations: 4271)
+
+
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:35:33 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms | Allocations: 8241)
+
+
+  
+NameError (undefined local variable or method `status' for #<TicketService:0x00007f71142ecf48>):
+  
+app/services/ticket_service.rb:81:in `update_ticket'
+app/services/ticket_service.rb:16:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:35:59 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:76:in `update_ticket'
+  [1m[36mTicket Update (0.7ms)[0m  [1m[33mUPDATE "tickets" SET "status" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["status", "in"], ["updated_at", "2023-10-21 12:36:00.042299"], ["id", 1]]
+  ↳ app/services/ticket_service.rb:76:in `update_ticket'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:76:in `update_ticket'
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 5.1ms | Allocations: 13048)
+
+
+  
+NameError (undefined local variable or method `status' for #<ResultObject:0x000056127e308ba8>):
+  
+app/services/result_object.rb:10:in `initialize'
+app/services/ticket_service.rb:84:in `new'
+app/services/ticket_service.rb:84:in `update_ticket'
+app/services/ticket_service.rb:16:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:36:15 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:76:in `update_ticket'
+  [1m[36mTicket Update (0.3ms)[0m  [1m[33mUPDATE "tickets" SET "status" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["status", "out"], ["updated_at", "2023-10-21 12:36:15.380227"], ["id", 1]]
+  ↳ app/services/ticket_service.rb:76:in `update_ticket'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:76:in `update_ticket'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 4.2ms | Allocations: 12840)
+
+
+  
+NameError (undefined local variable or method `status' for #<ResultObject:0x00007f71146a1d28>):
+  
+app/services/result_object.rb:10:in `initialize'
+app/services/ticket_service.rb:84:in `new'
+app/services/ticket_service.rb:84:in `update_ticket'
+app/services/ticket_service.rb:16:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:36:31 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:76:in `update_ticket'
+  [1m[36mTicket Update (1.4ms)[0m  [1m[33mUPDATE "tickets" SET "status" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["status", "in"], ["updated_at", "2023-10-21 12:36:31.364626"], ["id", 1]]
+  ↳ app/services/ticket_service.rb:76:in `update_ticket'
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:76:in `update_ticket'
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 6.8ms | Allocations: 11817)
+
+
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 12:36:54 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:76:in `update_ticket'
+  [1m[36mTicket Update (1.5ms)[0m  [1m[33mUPDATE "tickets" SET "status" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["status", "out"], ["updated_at", "2023-10-21 12:36:54.793299"], ["id", 1]]
+  ↳ app/services/ticket_service.rb:76:in `update_ticket'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:76:in `update_ticket'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 5.5ms | Allocations: 5044)
+
+
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/enter?id_ticket=1&category=fan" for 172.25.0.1 at 2023-10-21 12:37:40 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"fan"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+Completed 406 Not Acceptable in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1002)
+
+
+Started GET "/enter?id_ticket=1&category=fan" for 172.25.0.1 at 2023-10-21 12:53:28 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/usr/src/config/routes.rb:3: syntax error, unexpected tIDENTIFIER, expecting end
+  get 'block' to: 'tickets#block'
+              ^~):
+  
+config/routes.rb:3: syntax error, unexpected tIDENTIFIER, expecting end
+config/routes.rb:3: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/enter?id_ticket=1&category=fan" for 172.25.0.1 at 2023-10-21 12:53:43 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"fan"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:38:in `get_ticket_info'
+Completed 406 Not Acceptable in 11ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 7063)
+
+
+Started GET "/block" for 172.25.0.1 at 2023-10-21 12:53:49 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#block as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1724)
+
+
+  
+NameError (uninitialized constant BlockService::DockError):
+  
+app/services/block_service.rb:13:in `rescue in call'
+app/services/block_service.rb:7:in `call'
+app/controllers/tickets_controller.rb:8:in `block'
+Started GET "/block" for 172.25.0.1 at 2023-10-21 12:54:43 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#block as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 1405)
+
+
+  
+NameError (undefined local variable or method `params' for #<BlockService:0x00007f7114262780>
+Did you mean?  @params):
+  
+app/services/block_service.rb:30:in `check_docs'
+app/services/block_service.rb:10:in `call'
+app/controllers/tickets_controller.rb:8:in `block'
+Started GET "/block?id_ticket=1&doc_num=22" for 172.25.0.1 at 2023-10-21 12:55:14 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#block as HTML
+  Parameters: {"id_ticket"=>"1", "doc_num"=>"22"}
+Completed 500 Internal Server Error in 2ms (Allocations: 1237)
+
+
+  
+NameError (undefined local variable or method `params' for #<BlockService:0x00007f7114912d28>
+Did you mean?  @params):
+  
+app/services/block_service.rb:30:in `check_docs'
+app/services/block_service.rb:10:in `call'
+app/controllers/tickets_controller.rb:8:in `block'
+Started GET "/block?id_ticket=1&doc_num=22" for 172.25.0.1 at 2023-10-21 12:55:20 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#block as HTML
+  Parameters: {"id_ticket"=>"1", "doc_num"=>"22"}
+Completed 500 Internal Server Error in 2ms (Allocations: 1237)
+
+
+  
+NameError (undefined local variable or method `params' for #<BlockService:0x00007f711434c998>
+Did you mean?  @params):
+  
+app/services/block_service.rb:30:in `check_docs'
+app/services/block_service.rb:10:in `call'
+app/controllers/tickets_controller.rb:8:in `block'
+Started GET "/block?id_ticket=1&doc_num=22" for 172.25.0.1 at 2023-10-21 12:55:40 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#block as HTML
+  Parameters: {"id_ticket"=>"1", "doc_num"=>"22"}
+Completed 406 Not Acceptable in 2ms (Views: 0.2ms | Allocations: 654)
+
+
+Started GET "/block?id_ticket=1&doc_num=22" for 172.25.0.1 at 2023-10-21 12:55:59 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#block as HTML
+  Parameters: {"id_ticket"=>"1", "doc_num"=>"22"}
+Completed 406 Not Acceptable in 1ms (Views: 0.2ms | Allocations: 650)
+
+
+Started GET "/block?id_ticket=1&doc_num=22" for 172.25.0.1 at 2023-10-21 12:56:22 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#block as HTML
+  Parameters: {"id_ticket"=>"1", "doc_num"=>"22"}
+Completed 406 Not Acceptable in 3ms (Views: 0.3ms | Allocations: 654)
+
+
+Started GET "/block?id_ticket=1&doc_num=22" for 172.25.0.1 at 2023-10-21 12:56:39 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#block as HTML
+  Parameters: {"id_ticket"=>"1", "doc_num"=>"22"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/block_service.rb:35:in `update_ticket_status'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/block_service.rb:35:in `update_ticket_status'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/block_service.rb:39:in `update_ticket_status'
+  [1m[36mTicket Update (2.0ms)[0m  [1m[33mUPDATE "tickets" SET "updated_at" = ?, "blocked" = ? WHERE "tickets"."id" = ?[0m  [["updated_at", "2023-10-21 12:56:39.157334"], ["blocked", 1], ["id", 1]]
+  ↳ app/services/block_service.rb:39:in `update_ticket_status'
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/block_service.rb:39:in `update_ticket_status'
+Completed 200 OK in 34ms (Views: 0.3ms | ActiveRecord: 9.7ms | Allocations: 11756)
+
+
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/block?id_ticket=1&doc_num=23" for 172.25.0.1 at 2023-10-21 12:57:14 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#block as HTML
+  Parameters: {"id_ticket"=>"1", "doc_num"=>"23"}
+Completed 406 Not Acceptable in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 431)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToTickets (20231021142438)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "tickets" ADD "name" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231021142438"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLogs (20231021142938)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "logs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "id_ticket" integer, "date" datetime, "name" varchar, "type" varchar, "result" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231021142938"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 14:48:16 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 982)
+
+
+  
+SyntaxError (/usr/src/app/services/ticket_service.rb:40: syntax error, unexpected tIDENTIFIER, expecting '}'
+      name: 'Anton'}
+      ^~~~
+/usr/src/app/services/ticket_service.rb:40: syntax error, unexpected '}', expecting end
+      name: 'Anton'}
+                   ^
+/usr/src/app/services/ticket_service.rb:90: syntax error, unexpected tIDENTIFIER, expecting ')'
+                        blocked: false)
+                        ^~~~~~~
+/usr/src/app/services/ticket_service.rb:96: syntax error, unexpected end-of-input, expecting end):
+  
+app/services/ticket_service.rb:40: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/ticket_service.rb:40: syntax error, unexpected '}', expecting end
+app/services/ticket_service.rb:90: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/services/ticket_service.rb:96: syntax error, unexpected end-of-input, expecting end
+app/services/ticket_service.rb:40: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/ticket_service.rb:40: syntax error, unexpected '}', expecting end
+app/services/ticket_service.rb:90: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/services/ticket_service.rb:96: syntax error, unexpected end-of-input, expecting end
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 14:48:33 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+Completed 500 Internal Server Error in 1ms (Allocations: 984)
+
+
+  
+SyntaxError (/usr/src/app/services/ticket_service.rb:40: syntax error, unexpected tIDENTIFIER, expecting '}'
+      name: 'Anton'}
+      ^~~~
+/usr/src/app/services/ticket_service.rb:40: syntax error, unexpected '}', expecting end
+      name: 'Anton'}
+                   ^):
+  
+app/services/ticket_service.rb:40: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/ticket_service.rb:40: syntax error, unexpected '}', expecting end
+app/services/ticket_service.rb:40: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/ticket_service.rb:40: syntax error, unexpected '}', expecting end
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 14:48:53 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.1ms | Allocations: 10038)
+
+
+  
+NameError (uninitialized constant TicketService::Logs):
+  
+app/services/ticket_service.rb:17:in `rescue in call'
+app/services/ticket_service.rb:10:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 14:49:51 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (2.0ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 1], ["date", "2023-10-21 14:49:51.446406"], ["name", "Anton"], ["result", 0], ["created_at", "2023-10-21 14:49:51.469947"], ["updated_at", "2023-10-21 14:49:51.469947"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 406 Not Acceptable in 57ms (Views: 0.2ms | ActiveRecord: 8.0ms | Allocations: 17171)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:00:24 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms | Allocations: 8631)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'enter'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Log.inheritance_column to use another column for that information.):
+  
+app/services/create_log.rb:17:in `create_log'
+app/services/create_log.rb:11:in `call'
+app/services/ticket_service.rb:17:in `rescue in call'
+app/services/ticket_service.rb:10:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLogs (20231021142938)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "logs"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20231021142938"]]
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToTickets (20231021142438)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atickets" ("id" integer NOT NULL PRIMARY KEY, "id_ticket" integer DEFAULT NULL, "category" varchar DEFAULT NULL, "doc_type" varchar DEFAULT NULL, "doc_num" integer DEFAULT NULL, "date" datetime DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "blocked" boolean DEFAULT NULL, "name" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atickets" ("id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at","blocked","name")
+                     SELECT "id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at","blocked","name" FROM "tickets"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "tickets"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" integer NOT NULL PRIMARY KEY, "id_ticket" integer DEFAULT NULL, "category" varchar DEFAULT NULL, "doc_type" varchar DEFAULT NULL, "doc_num" integer DEFAULT NULL, "date" datetime DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "blocked" boolean DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tickets" ("id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at","blocked")
+                     SELECT "id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at","blocked" FROM "atickets"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "atickets"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20231021142438"]]
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddBlockedToTickets (20231021112738)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atickets" ("id" integer NOT NULL PRIMARY KEY, "id_ticket" integer DEFAULT NULL, "category" varchar DEFAULT NULL, "doc_type" varchar DEFAULT NULL, "doc_num" integer DEFAULT NULL, "date" datetime DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "blocked" boolean DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atickets" ("id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at","blocked")
+                     SELECT "id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at","blocked" FROM "tickets"[0m
+  [1m[35m (6.5ms)[0m  [1m[35mDROP TABLE "tickets"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" integer NOT NULL PRIMARY KEY, "id_ticket" integer DEFAULT NULL, "category" varchar DEFAULT NULL, "doc_type" varchar DEFAULT NULL, "doc_num" integer DEFAULT NULL, "date" datetime DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tickets" ("id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at")
+                     SELECT "id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at" FROM "atickets"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atickets"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20231021112738"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTickets (20231020143748)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.5ms)[0m  [1m[35mDROP TABLE "tickets"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20231020143748"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTickets (20231020143748)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "id_ticket" integer, "category" varchar, "doc_type" varchar, "doc_num" integer, "date" datetime, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231020143748"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddBlockedToTickets (20231021112738)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "tickets" ADD "blocked" boolean[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231021112738"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNameToTickets (20231021142438)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "tickets" ADD "name" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231021142438"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLogs (20231021142938)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "logs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "id_ticket" integer, "date" datetime, "name" varchar, "operation_type" varchar, "result" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231021142938"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:05:59 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:74:in `update_ticket'
+  [1m[36mTicket Create (1.9ms)[0m  [1m[32mINSERT INTO "tickets" ("id_ticket", "category", "doc_type", "doc_num", "date", "status", "created_at", "updated_at", "blocked", "name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 1], ["category", "VIP"], ["doc_type", "passport"], ["doc_num", 22], ["date", "2023-10-21 00:00:00"], ["status", "in"], ["created_at", "2023-10-21 15:05:59.986293"], ["updated_at", "2023-10-21 15:05:59.986293"], ["blocked", 0], ["name", "Anton"]]
+  ↳ app/services/ticket_service.rb:74:in `update_ticket'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:74:in `update_ticket'
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 6.9ms | Allocations: 11917)
+
+
+  
+NameError (undefined local variable or method `type' for #<TicketService:0x00007f7114776b40>):
+  
+app/services/ticket_service.rb:93:in `update_ticket'
+app/services/ticket_service.rb:15:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:06:34 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTicket Update (0.3ms)[0m  [1m[33mUPDATE "tickets" SET "status" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["status", "out"], ["updated_at", "2023-10-21 15:06:34.840197"], ["id", 1]]
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 4.8ms | Allocations: 16275)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'type' for Log.):
+  
+app/services/create_log.rb:17:in `create_log'
+app/services/create_log.rb:11:in `call'
+app/services/ticket_service.rb:93:in `update_ticket'
+app/services/ticket_service.rb:15:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:07:53 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTicket Update (0.2ms)[0m  [1m[33mUPDATE "tickets" SET "status" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["status", "in"], ["updated_at", "2023-10-21 15:07:53.113915"], ["id", 1]]
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "operation_type", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 1], ["date", "2023-10-21 15:07:53.122810"], ["name", "Anton"], ["operation_type", "exit"], ["result", 1], ["created_at", "2023-10-21 15:07:53.131281"], ["updated_at", "2023-10-21 15:07:53.131281"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 200 OK in 40ms (Views: 0.2ms | ActiveRecord: 9.7ms | Allocations: 20023)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/enter?id_ticket=2&category=VIP" for 172.25.0.1 at 2023-10-21 15:10:21 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"2", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:74:in `update_ticket'
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("id_ticket", "category", "doc_type", "doc_num", "date", "status", "created_at", "updated_at", "blocked", "name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["category", "VIP"], ["doc_type", "passport"], ["doc_num", 22], ["date", "2023-10-21 00:00:00"], ["status", "in"], ["created_at", "2023-10-21 15:10:21.612956"], ["updated_at", "2023-10-21 15:10:21.612956"], ["blocked", 0], ["name", "Anton"]]
+  ↳ app/services/ticket_service.rb:74:in `update_ticket'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:74:in `update_ticket'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "operation_type", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["date", "2023-10-21 15:10:21.621606"], ["name", "Anton"], ["operation_type", "enter"], ["result", 1], ["created_at", "2023-10-21 15:10:21.628129"], ["updated_at", "2023-10-21 15:10:21.628129"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 200 OK in 51ms (Views: 0.2ms | ActiveRecord: 8.2ms | Allocations: 20960)
+
+
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/logs" for 172.25.0.1 at 2023-10-21 15:11:41 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[36mLog Load (0.3ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 7190)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 7270)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 8396)
+
+
+  
+ActionView::Template::Error (undefined method `type' for #<Log:0x000056127e5b04f0>):
+    20:         <td><%= log.id_ticket %></td>
+    21:         <td><%= log.date %></td>
+    22:         <td><%= log.name %></td>
+    23:         <td><%= log.type %></td>
+    24:         <td><%= log.result %></td>
+    25:         <td><%= link_to 'Show', log %></td>
+    26:         <td><%= link_to 'Edit', edit_log_path(log) %></td>
+  
+app/views/logs/index.html.erb:23
+app/views/logs/index.html.erb:18
+Started GET "/log" for 172.25.0.1 at 2023-10-21 15:11:45 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/log"):
+  
+Started GET "/logs" for 172.25.0.1 at 2023-10-21 15:11:50 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 6826)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 6908)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 7171)
+
+
+  
+ActionView::Template::Error (undefined method `type' for #<Log:0x00007f7114753898>):
+    20:         <td><%= log.id_ticket %></td>
+    21:         <td><%= log.date %></td>
+    22:         <td><%= log.name %></td>
+    23:         <td><%= log.type %></td>
+    24:         <td><%= log.result %></td>
+    25:         <td><%= link_to 'Show', log %></td>
+    26:         <td><%= link_to 'Edit', edit_log_path(log) %></td>
+  
+app/views/logs/index.html.erb:23
+app/views/logs/index.html.erb:18
+Started GET "/logs" for 172.25.0.1 at 2023-10-21 15:13:11 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 5022)
+  Rendered layout layouts/application.html.erb (Duration: 66.5ms | Allocations: 21971)
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.2ms | Allocations: 23036)
+
+
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:13:26 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTicket Update (2.2ms)[0m  [1m[33mUPDATE "tickets" SET "status" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["status", "out"], ["updated_at", "2023-10-21 15:13:26.602463"], ["id", 2]]
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (1.8ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "operation_type", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["date", "2023-10-21 15:13:26.615873"], ["name", "Anton"], ["operation_type", "enter"], ["result", 1], ["created_at", "2023-10-21 15:13:26.616197"], ["updated_at", "2023-10-21 15:13:26.616197"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 12.9ms | Allocations: 9346)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-21 15:13:40 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1380)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2872)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 3167)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-21 15:19:30 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/logs/index.html.erb:18
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 6087)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 7581)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.5ms | Allocations: 8319)
+
+
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:19:37 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTicket Update (0.7ms)[0m  [1m[33mUPDATE "tickets" SET "status" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["status", "in"], ["updated_at", "2023-10-21 15:19:37.218093"], ["id", 2]]
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (2.4ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "operation_type", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["date", "2023-10-21 15:19:37.229678"], ["name", "Anton"], ["operation_type", "enter"], ["result", 1], ["created_at", "2023-10-21 15:19:37.230018"], ["updated_at", "2023-10-21 15:19:37.230018"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 200 OK in 40ms (Views: 0.2ms | ActiveRecord: 15.1ms | Allocations: 15152)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-21 15:19:43 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1546)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3037)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 3330)
+
+
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:19:51 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTicket Update (0.3ms)[0m  [1m[33mUPDATE "tickets" SET "status" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["status", "out"], ["updated_at", "2023-10-21 15:19:51.287462"], ["id", 2]]
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (0.2ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "operation_type", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["date", "2023-10-21 15:19:51.297004"], ["name", "Anton"], ["operation_type", "exit"], ["result", 1], ["created_at", "2023-10-21 15:19:51.297280"], ["updated_at", "2023-10-21 15:19:51.297280"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 7.1ms | Allocations: 9337)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-21 15:19:55 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1722)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3214)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 3507)
+
+
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:19:58 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTicket Update (2.8ms)[0m  [1m[33mUPDATE "tickets" SET "status" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["status", "in"], ["updated_at", "2023-10-21 15:19:58.884664"], ["id", 2]]
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:83:in `update_ticket'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (3.5ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "operation_type", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["date", "2023-10-21 15:19:58.898735"], ["name", "Anton"], ["operation_type", "enter"], ["result", 1], ["created_at", "2023-10-21 15:19:58.899028"], ["updated_at", "2023-10-21 15:19:58.899028"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 200 OK in 31ms (Views: 0.2ms | ActiveRecord: 17.8ms | Allocations: 9336)
+
+
+Started GET "/enter?id_ticket=1&category=fan" for 172.25.0.1 at 2023-10-21 15:20:08 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"fan"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:41:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (0.3ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "operation_type", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["date", "2023-10-21 15:20:08.772337"], ["name", "Anton"], ["operation_type", "enter"], ["result", 0], ["created_at", "2023-10-21 15:20:08.772571"], ["updated_at", "2023-10-21 15:20:08.772571"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 406 Not Acceptable in 10ms (Views: 0.1ms | ActiveRecord: 3.2ms | Allocations: 5286)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-21 15:20:12 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2074)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3565)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 3858)
+
+
+Started GET "/orders" for 172.25.0.1 at 2023-10-21 15:28:40 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/orders"):
+  
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:28:42 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+Completed 500 Internal Server Error in 1ms (Allocations: 1024)
+
+
+  
+SyntaxError (/usr/src/app/services/ticket_service.rb:50: syntax error, unexpected ==
+...enter' & @my_ticket[:status] == 'in'
+...                             ^~):
+  
+app/services/ticket_service.rb:50: syntax error, unexpected ==
+app/services/ticket_service.rb:50: syntax error, unexpected ==
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:28:44 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+Completed 500 Internal Server Error in 1ms (Allocations: 1054)
+
+
+  
+SyntaxError (/usr/src/app/services/ticket_service.rb:50: syntax error, unexpected ==
+...enter' & @my_ticket[:status] == 'in'
+...                             ^~):
+  
+app/services/ticket_service.rb:50: syntax error, unexpected ==
+app/services/ticket_service.rb:50: syntax error, unexpected ==
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:29:08 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+Completed 500 Internal Server Error in 2ms (Allocations: 1026)
+
+
+  
+SyntaxError (/usr/src/app/services/ticket_service.rb:51: syntax error, unexpected ==
+...enter' & @my_ticket[:status] == 'in'
+...                             ^~):
+  
+app/services/ticket_service.rb:51: syntax error, unexpected ==
+app/services/ticket_service.rb:51: syntax error, unexpected ==
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:29:28 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:47:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:47:in `get_ticket_info'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms | Allocations: 8766)
+
+
+  
+NameError (undefined local variable or method `type' for #<TicketService:0x00007f711466c650>
+Did you mean?  @type):
+  
+app/services/ticket_service.rb:51:in `check_type'
+app/services/ticket_service.rb:15:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:29:46 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:47:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:47:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (2.1ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "operation_type", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["date", "2023-10-21 15:29:46.812593"], ["name", "Anton"], ["operation_type", "enter"], ["result", 0], ["created_at", "2023-10-21 15:29:46.818125"], ["updated_at", "2023-10-21 15:29:46.818125"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 406 Not Acceptable in 43ms (Views: 0.2ms | ActiveRecord: 17.1ms | Allocations: 17014)
+
+
+  [1m[36mLog Load (1.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs" ORDER BY "logs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/exit?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-21 15:30:14 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#exit as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:47:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:93:in `update_ticket'
+  [1m[36mTicket Update (1.7ms)[0m  [1m[33mUPDATE "tickets" SET "status" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["status", "out"], ["updated_at", "2023-10-21 15:30:14.101499"], ["id", 2]]
+  ↳ app/services/ticket_service.rb:93:in `update_ticket'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:93:in `update_ticket'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (1.8ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "operation_type", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["date", "2023-10-21 15:30:14.112164"], ["name", "Anton"], ["operation_type", "exit"], ["result", 1], ["created_at", "2023-10-21 15:30:14.112451"], ["updated_at", "2023-10-21 15:30:14.112451"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 11.4ms | Allocations: 7536)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-21 15:30:19 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2545)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4040)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.2ms | Allocations: 4525)
+
+
+Started GET "/logss" for 172.25.0.1 at 2023-10-21 15:30:20 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logss"):
+  
+Started GET "/logs" for 172.25.0.1 at 2023-10-21 15:30:23 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2425)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3917)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 4212)
+
+
+Started GET "/logs/8" for 172.25.0.1 at 2023-10-21 15:30:33 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/logs_controller.rb:63:in `set_log'
+  Rendering layout layouts/application.html.erb
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 503)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1995)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 3117)
+
+
+Started GET "/logs/9" for 172.25.0.1 at 2023-10-21 15:30:36 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/logs_controller.rb:63:in `set_log'
+  Rendering layout layouts/application.html.erb
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 261)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1752)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 2602)
+
+
+Started GET "/logs/10" for 172.25.0.1 at 2023-10-21 15:30:41 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/logs_controller.rb:63:in `set_log'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 988)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Log with 'id'=10):
+  
+app/controllers/logs_controller.rb:63:in `set_log'
+Started GET "/logs/9" for 172.25.0.1 at 2023-10-21 15:30:44 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/logs_controller.rb:63:in `set_log'
+  Rendering layout layouts/application.html.erb
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 261)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1753)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 2602)
+
+
+Started GET "/logs/8" for 172.25.0.1 at 2023-10-22 10:09:51 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/logs_controller.rb:63:in `set_log'
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/logs_controller.rb:63:in `set_log'
+  Rendering layout layouts/application.html.erb
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 261)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1753)
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 3274)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 11:01:15 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 8249)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 12255)
+Completed 200 OK in 49ms (Views: 34.3ms | ActiveRecord: 0.7ms | Allocations: 16703)
+
+
+Started GET "/enter?id_ticket=1" for 172.25.0.1 at 2023-10-22 11:02:26 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1"}
+Completed 500 Internal Server Error in 5ms (Allocations: 2023)
+
+
+  
+NoMethodError (undefined method `get_ticket' for #<TicketSiteAdapter:0x00007fb98c225a40>
+Did you mean?  get_price):
+  
+app/services/ticket_service.rb:40:in `get_ticket_info'
+app/services/ticket_service.rb:13:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1" for 172.25.0.1 at 2023-10-22 11:02:51 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1"}
+Completed 503 Service Unavailable in 10ms (Views: 0.2ms | Allocations: 1413)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 11:02:58 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/logs/index.html.erb:18
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 7877)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 9487)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 1.3ms | Allocations: 10314)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLogs (20231021142938)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "logs"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20231021142938"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToTickets (20231021142438)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atickets" ("id" integer NOT NULL PRIMARY KEY, "id_ticket" integer DEFAULT NULL, "category" varchar DEFAULT NULL, "doc_type" varchar DEFAULT NULL, "doc_num" integer DEFAULT NULL, "date" datetime DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "blocked" boolean DEFAULT NULL, "name" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atickets" ("id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at","blocked","name")
+                     SELECT "id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at","blocked","name" FROM "tickets"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "tickets"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" integer NOT NULL PRIMARY KEY, "id_ticket" integer DEFAULT NULL, "category" varchar DEFAULT NULL, "doc_type" varchar DEFAULT NULL, "doc_num" integer DEFAULT NULL, "date" datetime DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "blocked" boolean DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tickets" ("id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at","blocked")
+                     SELECT "id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at","blocked" FROM "atickets"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atickets"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20231021142438"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddBlockedToTickets (20231021112738)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atickets" ("id" integer NOT NULL PRIMARY KEY, "id_ticket" integer DEFAULT NULL, "category" varchar DEFAULT NULL, "doc_type" varchar DEFAULT NULL, "doc_num" integer DEFAULT NULL, "date" datetime DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "blocked" boolean DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atickets" ("id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at","blocked")
+                     SELECT "id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at","blocked" FROM "tickets"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "tickets"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" integer NOT NULL PRIMARY KEY, "id_ticket" integer DEFAULT NULL, "category" varchar DEFAULT NULL, "doc_type" varchar DEFAULT NULL, "doc_num" integer DEFAULT NULL, "date" datetime DEFAULT NULL, "status" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tickets" ("id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at")
+                     SELECT "id","id_ticket","category","doc_type","doc_num","date","status","created_at","updated_at" FROM "atickets"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "atickets"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20231021112738"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTickets (20231020143748)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "tickets"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20231020143748"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTickets (20231020143748)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "tickets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "id_ticket" integer, "category" varchar, "doc_type" varchar, "doc_num" varchar, "date" datetime, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231020143748"]]
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddBlockedToTickets (20231021112738)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "tickets" ADD "blocked" boolean[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231021112738"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNameToTickets (20231021142438)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "tickets" ADD "name" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231021142438"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateLogs (20231021142938)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "logs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "id_ticket" integer, "date" datetime, "name" varchar, "operation_type" varchar, "result" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231021142938"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/enter?id_ticket=1" for 172.25.0.1 at 2023-10-22 11:05:45 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:47:in `get_ticket_info'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms | Allocations: 3845)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/services/ticket_service.rb:51:in `check_type'
+app/services/ticket_service.rb:15:in `call'
+app/controllers/tickets_controller.rb:3:in `enter'
+Started GET "/enter?id_ticket=1" for 172.25.0.1 at 2023-10-22 11:08:10 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:47:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:47:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "operation_type", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["date", "2023-10-22 11:08:10.416798"], ["name", "Anton"], ["operation_type", "enter"], ["result", 0], ["created_at", "2023-10-22 11:08:10.423097"], ["updated_at", "2023-10-22 11:08:10.423097"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 406 Not Acceptable in 25ms (Views: 0.2ms | ActiveRecord: 4.7ms | Allocations: 12256)
+
+
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-22 11:08:24 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:47:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:86:in `update_ticket'
+  [1m[36mTicket Create (0.3ms)[0m  [1m[32mINSERT INTO "tickets" ("id_ticket", "category", "doc_type", "doc_num", "date", "status", "created_at", "updated_at", "blocked", "name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["category", "VIP"], ["doc_type", "passport"], ["doc_num", "22"], ["date", "2023-10-22 00:00:00"], ["status", "in"], ["created_at", "2023-10-22 11:08:24.105917"], ["updated_at", "2023-10-22 11:08:24.105917"], ["blocked", 0], ["name", "Anton"]]
+  ↳ app/services/ticket_service.rb:86:in `update_ticket'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:86:in `update_ticket'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (0.9ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["date", "2023-10-22 11:08:24.116626"], ["name", "Anton"], ["result", 1], ["created_at", "2023-10-22 11:08:24.116970"], ["updated_at", "2023-10-22 11:08:24.116970"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 200 OK in 31ms (Views: 0.2ms | ActiveRecord: 6.8ms | Allocations: 14439)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 11:08:29 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1311)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2806)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 3292)
+
+
+Started GET "/logs/2" for 172.25.0.1 at 2023-10-22 11:08:37 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/logs_controller.rb:63:in `set_log'
+  Rendering layout layouts/application.html.erb
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 503)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1996)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 3123)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 11:11:05 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/logs/index.html.erb:18
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 6448)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 7942)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 1.4ms | Allocations: 8680)
+
+
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-22 11:11:12 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:47:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (2.4ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "operation_type", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["date", "2023-10-22 11:11:12.616114"], ["name", "Anton"], ["operation_type", "enter"], ["result", 0], ["created_at", "2023-10-22 11:11:12.616517"], ["updated_at", "2023-10-22 11:11:12.616517"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 406 Not Acceptable in 26ms (Views: 0.2ms | ActiveRecord: 7.5ms | Allocations: 11697)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 11:11:16 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1368)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2859)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms | Allocations: 3152)
+
+
+Started GET "/exit?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-22 11:11:35 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#exit as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:47:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/ticket_service.rb:94:in `update_ticket'
+  [1m[36mTicket Update (0.3ms)[0m  [1m[33mUPDATE "tickets" SET "status" = ?, "updated_at" = ? WHERE "tickets"."id" = ?[0m  [["status", "out"], ["updated_at", "2023-10-22 11:11:35.999638"], ["id", 1]]
+  ↳ app/services/ticket_service.rb:94:in `update_ticket'
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/ticket_service.rb:94:in `update_ticket'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (2.3ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "operation_type", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 2], ["date", "2023-10-22 11:11:36.012290"], ["name", "Anton"], ["operation_type", "exit"], ["result", 1], ["created_at", "2023-10-22 11:11:36.012609"], ["updated_at", "2023-10-22 11:11:36.012609"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 200 OK in 36ms (Views: 0.2ms | ActiveRecord: 20.1ms | Allocations: 9381)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 11:11:40 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1545)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3036)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 3329)
+
+
+Started GET "/block?id_ticket=1&doc_num=22" for 172.25.0.1 at 2023-10-22 11:13:50 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#block as HTML
+  Parameters: {"id_ticket"=>"1", "doc_num"=>"22"}
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 4534)
+
+
+  
+SyntaxError (/usr/src/app/services/block_service.rb:28: syntax error, unexpected tIDENTIFIER, expecting '}'
+      name: 'Anton'}
+      ^~~~
+/usr/src/app/services/block_service.rb:28: syntax error, unexpected '}', expecting end
+      name: 'Anton'}
+                   ^
+/usr/src/app/services/block_service.rb:45: syntax error, unexpected end-of-input, expecting end):
+  
+app/services/block_service.rb:28: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/block_service.rb:28: syntax error, unexpected '}', expecting end
+app/services/block_service.rb:45: syntax error, unexpected end-of-input, expecting end
+app/services/block_service.rb:28: syntax error, unexpected tIDENTIFIER, expecting '}'
+app/services/block_service.rb:28: syntax error, unexpected '}', expecting end
+app/services/block_service.rb:45: syntax error, unexpected end-of-input, expecting end
+app/controllers/tickets_controller.rb:13:in `block'
+Started GET "/block?id_ticket=1&doc_num=22" for 172.25.0.1 at 2023-10-22 11:14:15 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#block as HTML
+  Parameters: {"id_ticket"=>"1", "doc_num"=>"22"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/block_service.rb:36:in `update_ticket_status'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/block_service.rb:36:in `update_ticket_status'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/block_service.rb:38:in `update_ticket_status'
+  [1m[36mTicket Create (0.9ms)[0m  [1m[32mINSERT INTO "tickets" ("id_ticket", "created_at", "updated_at", "blocked") VALUES (?, ?, ?, ?)[0m  [["id_ticket", 1], ["created_at", "2023-10-22 11:14:15.921064"], ["updated_at", "2023-10-22 11:14:15.921064"], ["blocked", 1]]
+  ↳ app/services/block_service.rb:38:in `update_ticket_status'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/block_service.rb:38:in `update_ticket_status'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 5.2ms | Allocations: 11301)
+
+
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" ORDER BY "tickets"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 2], ["LIMIT", 1]]
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 3], ["LIMIT", 1]]
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-22 11:17:06 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/services/ticket_service.rb:47:in `get_ticket_info'
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id_ticket" = ? LIMIT ?[0m  [["id_ticket", 1], ["LIMIT", 1]]
+  ↳ app/services/ticket_service.rb:47:in `get_ticket_info'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mLog Create (2.4ms)[0m  [1m[32mINSERT INTO "logs" ("id_ticket", "date", "name", "operation_type", "result", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["id_ticket", 1], ["date", "2023-10-22 11:17:06.626462"], ["name", "Anton"], ["operation_type", "enter"], ["result", 0], ["created_at", "2023-10-22 11:17:06.631979"], ["updated_at", "2023-10-22 11:17:06.631979"]]
+  ↳ app/services/create_log.rb:17:in `create_log'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/services/create_log.rb:17:in `create_log'
+Completed 406 Not Acceptable in 35ms (Views: 0.2ms | ActiveRecord: 9.2ms | Allocations: 16952)
+
+
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-22 11:17:54 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+Completed 503 Service Unavailable in 8ms (Views: 0.2ms | Allocations: 1495)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 11:18:47 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering logs/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/logs/index.html.erb:18
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/views/logs/index.html.erb:18
+  Rendered logs/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 6977)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 8472)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 1.1ms | Allocations: 9208)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 11:44:26 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/logs_controller.rb:6:in `index'
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/controllers/logs_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.6ms | Allocations: 6504)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 11:46:21 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/logs_controller.rb:7:in `index'
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/controllers/logs_controller.rb:7:in `index'
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 1.1ms | Allocations: 7057)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 11:46:39 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/logs_controller.rb:8:in `index'
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/controllers/logs_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 1.1ms | Allocations: 7081)
+
+
+Started GET "/logs?name=Anton" for 172.25.0.1 at 2023-10-22 11:46:51 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton"}
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ?[0m  [["name", "Anton"]]
+  ↳ app/controllers/logs_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1638)
+
+
+Started GET "/logs?name=Ant" for 172.25.0.1 at 2023-10-22 11:46:57 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Ant"}
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ?[0m  [["name", "Ant"]]
+  ↳ app/controllers/logs_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 848)
+
+
+Started GET "/logs?name=Anton" for 172.25.0.1 at 2023-10-22 11:47:00 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ?[0m  [["name", "Anton"]]
+  ↳ app/controllers/logs_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 1593)
+
+
+Started GET "/logs?name=Anton" for 172.25.0.1 at 2023-10-22 11:47:57 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/logs_controller.rb:7:in `index'
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ?[0m  [["name", "Anton"]]
+  ↳ app/controllers/logs_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 1.2ms | Allocations: 7056)
+
+
+Started GET "/logs?name=Anton&id_ticket=1" for 172.25.0.1 at 2023-10-22 11:48:07 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "id_ticket"=>"1"}
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."id_ticket" = ?[0m  [["name", "Anton"], ["id_ticket", 1]]
+  ↳ app/controllers/logs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1089)
+
+
+Started GET "/logs?name=Anton&id_ticket=2" for 172.25.0.1 at 2023-10-22 11:48:12 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "id_ticket"=>"2"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."id_ticket" = ?[0m  [["name", "Anton"], ["id_ticket", 2]]
+  ↳ app/controllers/logs_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 1484)
+
+
+Started GET "/logs?name=Anton&id_ticket=2" for 172.25.0.1 at 2023-10-22 11:49:21 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "id_ticket"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/logs_controller.rb:7:in `index'
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."id_ticket" = ?[0m  [["name", "Anton"], ["id_ticket", 2]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 1.1ms | Allocations: 6947)
+
+
+Started GET "/logs?name=Anton&id_ticket=2&type=enter" for 172.25.0.1 at 2023-10-22 11:49:33 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "id_ticket"=>"2", "type"=>"enter"}
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."id_ticket" = ? AND "logs"."operation_type" = ?[0m  [["name", "Anton"], ["id_ticket", 2], ["operation_type", "enter"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1273)
+
+
+Started GET "/logs?name=Anton&id_ticket=2&type=ezit" for 172.25.0.1 at 2023-10-22 11:49:40 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "id_ticket"=>"2", "type"=>"ezit"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."id_ticket" = ? AND "logs"."operation_type" = ?[0m  [["name", "Anton"], ["id_ticket", 2], ["operation_type", "ezit"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.1ms | Allocations: 929)
+
+
+Started GET "/logs?name=Anton&id_ticket=2&type=exit" for 172.25.0.1 at 2023-10-22 11:49:44 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "id_ticket"=>"2", "type"=>"exit"}
+  [1m[36mLog Load (0.3ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."id_ticket" = ? AND "logs"."operation_type" = ?[0m  [["name", "Anton"], ["id_ticket", 2], ["operation_type", "exit"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1078)
+
+
+Started GET "/logs?name=Anton&type=exit" for 172.25.0.1 at 2023-10-22 11:50:03 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "type"=>"exit"}
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."operation_type" = ?[0m  [["name", "Anton"], ["operation_type", "exit"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1088)
+
+
+Started GET "/logs?name=Anton&type=exit" for 172.25.0.1 at 2023-10-22 11:50:07 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "type"=>"exit"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."operation_type" = ?[0m  [["name", "Anton"], ["operation_type", "exit"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1043)
+
+
+Started GET "/logs?name=Anton&type=enter" for 172.25.0.1 at 2023-10-22 11:50:11 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "type"=>"enter"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."operation_type" = ?[0m  [["name", "Anton"], ["operation_type", "enter"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1343)
+
+
+Started GET "/logs?name=Anton" for 172.25.0.1 at 2023-10-22 11:51:36 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/logs_controller.rb:7:in `index'
+  [1m[36mLog Load (0.4ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ?[0m  [["name", "Anton"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 18ms (Views: 11.9ms | ActiveRecord: 1.6ms | Allocations: 7101)
+
+
+Started GET "/logs?name=Anton&date=2023-10-22T11:08:10.423Z" for 172.25.0.1 at 2023-10-22 11:51:54 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "date"=>"2023-10-22T11:08:10.423Z"}
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."date" = ?[0m  [["name", "Anton"], ["date", "2023-10-22 11:08:10.423000"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 961)
+
+
+Started GET "/logs?name=Anton&date=2023-10-22" for 172.25.0.1 at 2023-10-22 11:52:03 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "date"=>"2023-10-22"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."date" = ?[0m  [["name", "Anton"], ["date", "2023-10-22 00:00:00"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 913)
+
+
+Started GET "/logs?name=Anton&date=2023-10-22T11:08:10.423Z" for 172.25.0.1 at 2023-10-22 11:52:27 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "date"=>"2023-10-22T11:08:10.423Z"}
+  [1m[36mLog Load (0.3ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."date" = ?[0m  [["name", "Anton"], ["date", "2023-10-22 11:08:10.423000"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 915)
+
+
+Started GET "/logs?name=Anton" for 172.25.0.1 at 2023-10-22 11:52:31 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton"}
+  [1m[36mLog Load (0.3ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ?[0m  [["name", "Anton"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1599)
+
+
+Started GET "/logs?date=2023-10-22T11:08:10.416Z" for 172.25.0.1 at 2023-10-22 11:52:48 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"date"=>"2023-10-22T11:08:10.416Z"}
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."date" = ?[0m  [["date", "2023-10-22 11:08:10.416000"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 921)
+
+
+Started GET "/logs?name=Anton" for 172.25.0.1 at 2023-10-22 11:52:53 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ?[0m  [["name", "Anton"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 1599)
+
+
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" ORDER BY "logs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/logs?name=Anton&result=false" for 172.25.0.1 at 2023-10-22 11:54:41 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "result"=>"false"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/logs_controller.rb:7:in `index'
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."result" = ?[0m  [["name", "Anton"], ["result", 0]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 25ms (Views: 19.7ms | ActiveRecord: 1.5ms | Allocations: 6803)
+
+
+Started GET "/logs?name=Anton&result=false&type=enter" for 172.25.0.1 at 2023-10-22 11:54:56 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "result"=>"false", "type"=>"enter"}
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."result" = ? AND "logs"."operation_type" = ?[0m  [["name", "Anton"], ["result", 0], ["operation_type", "enter"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1423)
+
+
+Started GET "/logs?name=Anton&result=false&type=exit" for 172.25.0.1 at 2023-10-22 11:55:01 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "result"=>"false", "type"=>"exit"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."result" = ? AND "logs"."operation_type" = ?[0m  [["name", "Anton"], ["result", 0], ["operation_type", "exit"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 928)
+
+
+Started GET "/logs?name=Anton&result=true&type=exit" for 172.25.0.1 at 2023-10-22 11:55:05 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "result"=>"true", "type"=>"exit"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."result" = ? AND "logs"."operation_type" = ?[0m  [["name", "Anton"], ["result", 1], ["operation_type", "exit"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1078)
+
+
+Started GET "/logs?name=Anton&result=true&type=enter" for 172.25.0.1 at 2023-10-22 11:55:11 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"name"=>"Anton", "result"=>"true", "type"=>"enter"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."name" = ? AND "logs"."result" = ? AND "logs"."operation_type" = ?[0m  [["name", "Anton"], ["result", 1], ["operation_type", "enter"]]
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 928)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 11:55:24 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/controllers/logs_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1602)
+
+
+Started GET "/logs/2" for 172.25.0.1 at 2023-10-22 12:33:02 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/logs_controller.rb:67:in `set_log'
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/logs_controller.rb:67:in `set_log'
+  Rendering layout layouts/application.html.erb
+  Rendering logs/show.html.erb within layouts/application
+  Rendered logs/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 270)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1765)
+Completed 200 OK in 11ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 3523)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 12:34:58 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/logs_controller.rb:11:in `index'
+  [1m[36mLog Load (0.3ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/controllers/logs_controller.rb:11:in `index'
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 1.9ms | Allocations: 7090)
+
+
+Started GET "/logs?date=2023-10-22T11:08:10.416Z" for 172.25.0.1 at 2023-10-22 12:35:12 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"date"=>"2023-10-22T11:08:10.416Z"}
+  [1m[36mLog Load (0.3ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."date" = ?[0m  [["date", "2023-10-22 11:08:10.416000"]]
+  ↳ app/controllers/logs_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 924)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 12:35:15 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/controllers/logs_controller.rb:11:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 1560)
+
+
+Started GET "/logs?date=2023-10-22" for 172.25.0.1 at 2023-10-22 12:35:27 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"date"=>"2023-10-22"}
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE "logs"."date" = ?[0m  [["date", "2023-10-22 00:00:00"]]
+  ↳ app/controllers/logs_controller.rb:11:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 877)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 12:38:05 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/logs_controller.rb:11:in `index'
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/controllers/logs_controller.rb:11:in `index'
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 1.2ms | Allocations: 7091)
+
+
+Started GET "/logs&date=2023-10-22" for 172.25.0.1 at 2023-10-22 12:38:14 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logs&date=2023-10-22"):
+  
+Started GET "/logs?date=2023-10-22" for 172.25.0.1 at 2023-10-22 12:38:20 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"date"=>"2023-10-22"}
+  [1m[36mLog Load (0.3ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE (DATE(date) = '2023-10-22' )[0m
+  ↳ app/controllers/logs_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1650)
+
+
+  [1m[36mLog Load (0.4ms)[0m  [1m[34mSELECT "logs".* FROM "logs" ORDER BY "logs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" ORDER BY "logs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLog Update (0.5ms)[0m  [1m[33mUPDATE "logs" SET "date" = ?, "updated_at" = ? WHERE "logs"."id" = ?[0m  [["date", "2023-10-23 11:14:15.921064"], ["updated_at", "2023-10-22 12:39:38.577547"], ["id", 5]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 12:39:48 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/controllers/logs_controller.rb:11:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1560)
+
+
+Started GET "/logs&date=2023-10-23" for 172.25.0.1 at 2023-10-22 12:40:04 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/logs&date=2023-10-23"):
+  
+Started GET "/logs?date=2023-10-23" for 172.25.0.1 at 2023-10-22 12:40:09 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"date"=>"2023-10-23"}
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE (DATE(date) = '2023-10-23' )[0m
+  ↳ app/controllers/logs_controller.rb:11:in `index'
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.2ms | Allocations: 1039)
+
+
+Started GET "/logs?date=2023-10-23" for 172.25.0.1 at 2023-10-22 12:46:27 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  Parameters: {"date"=>"2023-10-23"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/logs_controller.rb:13:in `index'
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs" WHERE (DATE(date) = '2023-10-23' )[0m
+  ↳ app/controllers/logs_controller.rb:14:in `index'
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.5ms | Allocations: 5869)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 12:46:31 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/controllers/logs_controller.rb:14:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1606)
+
+
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-22 12:46:36 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+Completed 503 Service Unavailable in 9ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1637)
+
+
+Started GET "/enter?id_ticket=1&category=VIP" for 172.25.0.1 at 2023-10-22 13:02:10 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TicketsController#enter as HTML
+  Parameters: {"id_ticket"=>"1", "category"=>"VIP"}
+Completed 503 Service Unavailable in 26ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2597)
+
+
+Started GET "/logs" for 172.25.0.1 at 2023-10-22 13:02:13 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/controllers/logs_controller.rb:14:in `index'
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.7ms | Allocations: 7028)
+
+
+Started GET "/block?id_ticket=1&doc_num=22" for 172.25.0.1 at 2023-10-22 13:02:23 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#block as HTML
+  Parameters: {"id_ticket"=>"1", "doc_num"=>"22"}
+Completed 503 Service Unavailable in 8ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1244)
+
+
+Started GET "/" for 192.168.65.1 at 2023-10-22 13:26:15 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.8ms | Allocations: 509)
+Completed 200 OK in 33ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 4233)
+
+
+Started GET "/block" for 192.168.65.1 at 2023-10-22 13:26:22 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TicketsController#block as HTML
+Completed 503 Service Unavailable in 185ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1555)
+
+
+Started GET "/logs" for 192.168.65.1 at 2023-10-22 13:26:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  [1m[36mLog Load (1.7ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/controllers/logs_controller.rb:14:in `index'
+Completed 200 OK in 30ms (Views: 13.3ms | ActiveRecord: 3.0ms | Allocations: 7098)
+
+
+Started GET "/logs" for 192.168.65.1 at 2023-10-22 13:27:02 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  [1m[36mLog Load (1.0ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/controllers/logs_controller.rb:14:in `index'
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 1.0ms | Allocations: 1560)
+
+
+Started GET "/logs" for 192.168.65.1 at 2023-10-22 13:27:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LogsController#index as HTML
+  [1m[36mLog Load (1.8ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+  ↳ app/controllers/logs_controller.rb:14:in `index'
+Completed 200 OK in 17ms (Views: 11.5ms | ActiveRecord: 1.8ms | Allocations: 1574)
+
+

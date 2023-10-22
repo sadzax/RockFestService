@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id ticket:</strong>
+  <%= @log.id_ticket %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @log.date %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @log.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @log.operation_type %>
+</p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @log.result %>
+</p>
+
+<%= link_to 'Edit', edit_log_path(@log) %> |
+<%= link_to 'Back', logs_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id ticket</th>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Result</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logs.each do |log| %>
+      <tr>
+        <td><%= log.id_ticket %></td>
+        <td><%= log.date %></td>
+        <td><%= log.name %></td>
+        <td><%= log.operation_type %></td>
+        <td><%= log.result %></td>
+        <td><%= link_to 'Show', log %></td>
+        <td><%= link_to 'Edit', edit_log_path(log) %></td>
+        <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Log', new_log_path %>
