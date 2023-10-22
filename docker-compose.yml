@@ -1,9 +1,31 @@
-version: "3.7"
+version: "3"
 services:
-  ruby_dev:
+  pricing_app:
+    build: ./prices_serviice # ???
+    ports:
+      - '3003:3003'
+    volumes:
+      - ./prices_serviice/:/usr/src/prices_serviice
+  booking_app:
+    build: ./booking_app
+    ports: 
+      - '3004:3004'
+    volumes:
+      - ./booking_app/:/usr/src/booking_app
+    environment:
+      REDIS_URL: redis://redis:6379/0
+  buying_app:
     build: ./buying_app
-    container_name: service_03_buying
     ports:
       - "3006:3006"
     volumes:
       - ./:/usr/src/buying_app
+  logging_app:
+    build: ./logging_app
+    ports:
+      - "3007:3007"
+    volumes:
+      - ./:/usr/src/logging_app
+
+volumes:
+  redis:
