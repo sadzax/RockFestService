@@ -1,0 +1,29 @@
+#следуем принципу KISS
+version: '3'
+services:
+#у нас 1 контейнер с рельсами
+  booking_app:
+#нужный докерфайл в той же директории
+    build: .
+#порт (1025..65535).to_a.sample:3000
+    ports: 
+      - '3004:3004'
+#сохраняем все изменения в ту же директорию
+    volumes:
+      - ./:/usr/src/booking_app
+    environment:
+      REDIS_URL: redis://redis:6379/0
+  redis:
+    image: redis:alpine
+    volumes:
+      - redis:/data
+  sidekiq:
+    build: .
+    command: sidekiq
+    volumes:
+      - ./:/usr/src/booking_app
+    environment:
+      REDIS_URL: redis://redis:6379/0
+        
+volumes:
+  redis:

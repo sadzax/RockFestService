@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id book:</strong>
+  <%= id_book = @booking.id_book %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @booking.date %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @booking.category %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @booking.price %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @booking.status %>
+</p>
+<%= button_to 'Отменить бронирование', "/bookings/#{id_book}", method: :delete %>
