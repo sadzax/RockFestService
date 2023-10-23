@@ -20,7 +20,7 @@ class BuyingController < ApplicationController
     response_of_the_service = client.patch("http://booking_app:3004/bookings/#{user_input[:id_book]}", json: { status: 'bought' })
 
     if response_of_the_service.code == 400
-      render: "Извините, номер брони не подходит", status: :not_found
+      render json: { result: false, error: 'Извините номер брони не подходит' }, status: :not_found
     else
       booking_data = JSON.parse(response_of_the_service.body, symbolize_names: true)
       create_guest_and_ticket(booking_data)
