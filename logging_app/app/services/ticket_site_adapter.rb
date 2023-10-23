@@ -9,7 +9,7 @@ class TicketSiteAdapter
   end
 
   def get_ticket(body_params)
-    response = client.request(:get, "#{BASE_URL}/check_ticket", body_params)
+    response = client.request(:get, "#{BASE_URL}/check_ticket?id_ticket=#{body_params}")
     parse_response(response)
   end
 
