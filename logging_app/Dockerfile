@@ -9,7 +9,7 @@ RUN echo "ru_RU.UTF-8 UTF-8" > /etc/locale.gen && \
   /usr/sbin/update-locale LANG=ru_RU.UTF-8
 ENV LC_ALL ru_RU.UTF-8
 
-ENV APP_PATH=/usr/src
+ENV APP_PATH=/usr/src/logging_app
 WORKDIR $APP_PATH
 
 # устаналиваем гемы, необходимые приложению

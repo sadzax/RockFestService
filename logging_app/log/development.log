@@ -2157,3 +2157,13 @@ Processing by LogsController#index as HTML
 Completed 200 OK in 17ms (Views: 11.5ms | ActiveRecord: 1.8ms | Allocations: 1574)
 
 
+Started GET "/" for 10.233.1.241 at 2023-10-23 18:59:15 +0000
+Cannot render console from 10.233.1.241! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.1ms | Allocations: 508)
+Completed 200 OK in 19ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 4233)
+
+

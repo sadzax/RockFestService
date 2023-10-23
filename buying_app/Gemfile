@@ -45,3 +45,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'uuid', '>= 2.3.9'
 gem 'httpclient'
+gem 'faker', '~> 2.20', group: :development
