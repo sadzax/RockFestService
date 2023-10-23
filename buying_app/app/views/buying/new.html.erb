@@ -3,7 +3,7 @@
 <h1></h1><br>
 <h1>Пожалуйста, введите свои данные</h1>
 
-<%= form_with(url: buy_path, method: :post, local: true) do |form| %>
+<%= form_with(url: buy_path, method: :post, local: true, authenticity_token: false) do |form| %>
   
   <%= form.text_field :name, placeholder: 'Ваше имя' %> <br>
   <%= form.number_field :age, placeholder: 'Возраст' %> <br>
@@ -13,3 +13,4 @@
 
   <%= form.submit 'Купить билет' %>
 <% end %>
+
