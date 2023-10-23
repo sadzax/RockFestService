@@ -3,6 +3,7 @@ require 'json'
 require 'uri'
 
 class BuyingController < ApplicationController
+  DEFAULT_URL_FOR_BOOKING = "http://booking_app:3004/"
 
   skip_before_action :verify_authenticity_token
 
@@ -18,9 +19,8 @@ class BuyingController < ApplicationController
     client = HTTPClient.new
     response_of_the_service = client.patch("http://booking_app:3004/bookings/#{user_input[:id_book]}", json: { status: 'bought' })
 
-    if response_of_the_service.code == 404
-      flash[:error] = 'Извините, номер брони не подходит'
-      redirect_to root_path
+    if response_of_the_service.code == 400
+      render: "Извините, номер брони не подходит", status: :not_found
     else
       booking_data = JSON.parse(response_of_the_service.body, symbolize_names: true)
       create_guest_and_ticket(booking_data)
@@ -28,14 +28,38 @@ class BuyingController < ApplicationController
     end
   end
 
+  def check_ticket
+    #  Получаю билет
+    id_ticket = params[:id_ticket]
+
+    #  Проверяю билет в БД
+    unless Ticket.find_by(id: id_ticket)
+      render json: { result: false, error: 'Билет не найден' }, status: :not_found
+    end
+    
+    #  Беру билет
+    ticket = Ticket.find_by(id: id_ticket)
+
+    #  Отдаю JSON
+    render json: {
+      result: true,
+      id_ticket: ticket.id,
+      name: ticket.name,
+      category: ticket.category,
+      doc_type: ticket.doc_type,
+      doc_num: ticket.doc_num,
+      date: ticket.date.strftime('%Y-%m-%d')
+    }
+  end
+
   private
 
   def create_guest_and_ticket(booking_data)
     guest = Guest.create(
       id_book: booking_data[:id_book],
-      name: '...', 
-      doc_type: '...',
-      doc_num: '...'
+      name: user_input[:name], 
+      doc_type: user_input[:doc_type],
+      doc_num: user_input[:doc_num]
     )
 
     Ticket.create(
