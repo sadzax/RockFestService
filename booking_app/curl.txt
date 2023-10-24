@@ -1,1 +1,1 @@
-curl -X POST http://0.0.0.0:3004/bookings/5b9c217e-702f-40fe-9960-0654f51d1235 -H "Content-Type: application/json" -d '{"status": "bouht"}'
+curl -X POST http://booking_app/bookings/5b9c217e-702f-40fe-9960-0654f51d1235 -H "Content-Type: application/json" -d '{"status": "bouht"}'

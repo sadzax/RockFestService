@@ -14,9 +14,6 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
-  def edit
-  end
-
   def create
     id_book = SecureRandom.uuid
     status = 'booked'
@@ -37,7 +34,8 @@ class BookingsController < ApplicationController
 
   def update
     if @booking.try(:update, booking_params)
-      render json: {status: @booking.status}, status: :ok
+      render json: { id_book: @booking.id_book, category: @booking.category, date: @booking.date,
+                     price: @booking.price, status: @booking.status }, status: :ok
     else
       render json: {result: false}, status: :not_found
     end
@@ -46,8 +44,8 @@ class BookingsController < ApplicationController
   def destroy
     begin
       if @booking.status == 'booked'
-        SiteService.call({category: @booking.category, date: @booking.date})
         @booking.destroy
+        SiteService.call({category: @booking.category, date: @booking.date})
         respond_to do |format|
           format.html { redirect_to bookings_url, notice: "Бронирование отменено" }
           format.json { head :no_content }

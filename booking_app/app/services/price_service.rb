@@ -7,6 +7,7 @@ class PriceService
     date = []
     3.times{|i| date.push(params["date(#{i+1}i)"])} 
     date = date.join('-')
+    date ||= params[:date]
     uri = URI("http://pricing_app:3003/events/#{date}/#{params[:category]}")
     response = Net::HTTP.get_response(uri)
     status = response.code.to_i

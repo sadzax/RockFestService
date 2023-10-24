@@ -5,8 +5,8 @@ class BookingControlJob
   def perform(id)
     book = Booking.find_by(id: id)
     if book.try(:status) == 'booked'
-      SiteService.call(**{category: book.category, date: book.date})
       book.delete
+      SiteService.call(**{category: book.category, date: book.date})
     end
   end
 end
