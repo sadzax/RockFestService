@@ -13,10 +13,9 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
-  config.hosts = [
-    IPAddr.new("0.0.0.0/0"), # All IPv4 addresses.
-    IPAddr.new("::/0"),      # All IPv6 addresses.
-    "localhost",             # The localhost reserved domain.
+  config.hosts = [IPAddr.new("0.0.0.0/0"), 
+    IPAddr.new("::/0"),      
+    "localhost",             
     "booking_app"   # Allow this to be addressed when running in containers via docker-compose.yml.
   ]
   # Enable/disable caching. By default caching is disabled.
