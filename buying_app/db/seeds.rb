@@ -25,7 +25,7 @@
     doc_type: guest.doc_type,
     doc_num: guest.doc_num,
     category: %w[vip fan][rand(2)],
-    # date: Faker::Date.between(from: 1.year.ago, to: Date.today),
+    date: Faker::Date.between(from: 1.year.ago, to: Date.today),
     price: rand(1000..2500))
 
   # ticket = Ticket.create

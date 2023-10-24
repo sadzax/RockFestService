@@ -7,7 +7,7 @@ class CreateTickets < ActiveRecord::Migration[6.1]
       t.string :doc_type
       t.string :doc_num
       t.string :category
-      # t.date :date
+      t.date :date
       t.integer :price
 
       t.timestamps

@@ -8,7 +8,7 @@ class Ticket < ApplicationRecord
     attribute :doc_type, :string
     attribute :doc_num, :string
     attribute :category, :string
-    # attribute :date, :date
+    attribute :date, :date
     attribute :price, :integer
 
     #  Создаём UUID

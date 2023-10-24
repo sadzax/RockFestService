@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2023_10_23_191019) do
     t.string "doc_type"
     t.string "doc_num"
     t.string "category"
-    # t.date "date"
+    t.date "date"
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
