@@ -17,22 +17,36 @@ class BuyingController < ApplicationController
     user_input = params.permit(:name, :age, :doc_type, :doc_num, :id_book)
     id_book = user_input[:id_book]
 
-    #  Отправляю патч на '/booking_app'
-    client = HTTPClient.new
-    headers = { 'Content-Type' => 'application/json' }
-    response_of_the_service = client.patch("http://booking_app:3004/bookings/#{id_book}", body: { status: 'bought' }.to_json, header: headers)
-
-
-    if response_of_the_service.code == 404
-      render json: { result: false, error: 'Извините номер брони не подходит' }, status: :not_found
+    #  Проверка валидности данных пользователя
+    if user_input[:age].to_i < 13
+      render 'too_young'
+    
     else
-      booking_data = JSON.parse(response_of_the_service.body, symbolize_names: true)
-      #  Конвертируем booking_data[:date].class => Date
-      if booking_data[:date].class == String
-        booking_data[:date] = Date.parse(booking_data[:date])
+      #  Отправляю патч на '/booking_app'
+      client = HTTPClient.new
+      headers = { 'Content-Type' => 'application/json' }
+      response_of_the_service = client.patch("http://booking_app:3004/bookings/#{id_book}", body: { status: 'bought' }.to_json, header: headers)
+
+
+      if response_of_the_service.code == 404
+        render json: { result: false, error: 'Извините номер брони не подходит' }, status: :not_found
+      else
+        booking_data = JSON.parse(response_of_the_service.body, symbolize_names: true)
+        #  Конвертируем booking_data[:date].class => Date
+        if booking_data[:date].class == String
+          booking_data[:date] = Date.parse(booking_data[:date])
+        end
+        create_guest_and_ticket(booking_data, user_input)
+
+        #  Отправляем пользователю "привет с данными билета"
+        render 'show_ticket', locals: {name: user_input[:name],
+          doc_type: user_input[:doc_type],
+          doc_num: user_input[:doc_num],
+          category: booking_data[:category],
+          date: booking_data[:date],
+          price: booking_data[:price]}
+
       end
-      create_guest_and_ticket(booking_data, user_input)
-      #  Отправляем пользователю "привет с данными билета"
     end
   end
 
