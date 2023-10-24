@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2023_10_21_142938) do
 
   create_table "logs", force: :cascade do |t|
-    t.integer "id_ticket"
+    t.string "id_ticket"
     t.datetime "date"
     t.string "name"
     t.string "operation_type"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2023_10_21_142938) do
   end
 
   create_table "tickets", force: :cascade do |t|
-    t.integer "id_ticket"
+    t.string "id_ticket"
     t.string "category"
     t.string "doc_type"
     t.string "doc_num"

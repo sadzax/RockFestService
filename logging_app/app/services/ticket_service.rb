@@ -27,16 +27,16 @@ class TicketService
   rescue TicketError
     ResultObject.new(false, 'Такого билета не существует', 406)
   rescue BlockedError
-    CreateLog.new(@ticket_info[:id_ticket], @ticket_info[:name], @type, false).call
+    CreateLog.new(@ticket_info['id_ticket'], @ticket_info['name'], @type, false).call
     ResultObject.new(false, 'Билет заблокирован', 406)
   rescue TypeError
-    CreateLog.new(@ticket_info[:id_ticket], @ticket_info[:name], @type, false).call
+    CreateLog.new(@ticket_info['id_ticket'], @ticket_info['name'], @type, false).call
     ResultObject.new(false, 'Невозможно выйти/войти два раза подряд', 406)
   rescue CategoryError
-    CreateLog.new(@ticket_info[:id_ticket], @ticket_info[:name], @type, false).call
+    CreateLog.new(@ticket_info['id_ticket'], @ticket_info['name'], @type, false).call
     ResultObject.new(false, 'У вас билет другой категории', 406)
   rescue DateError
-    CreateLog.new(@ticket_info[:id_ticket], @ticket_info[:name], @type, false).call
+    CreateLog.new(@ticket_info['id_ticket'], @ticket_info['name'], @type, false).call
     ResultObject.new(false, 'Ваш билет на другой день', 406)
   rescue SocketError
     ResultObject.new(false, 'Нет связи с сервисом byuing', 503)
