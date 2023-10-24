@@ -28,6 +28,17 @@ services:
       - ./logging_app:/usr/src/logging_app
     env_file:
       - ./logging_app/web_variables.env
+  redis:
+    image: redis:alpine
+    volumes:
+      - redis:/data
+  sidekiq:
+    build: ./booking_app/
+    command: sidekiq
+    volumes:
+      - ./booking_app/:/usr/src/booking_app
+    environment:
+      REDIS_URL: redis://redis:6379/0
 
 volumes:
   redis:

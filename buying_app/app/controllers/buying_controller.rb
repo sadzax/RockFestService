@@ -14,16 +14,18 @@ class BuyingController < ApplicationController
   def buy
     #  Получаем данные от пользователя, предполагаем, что оплата уже прошла
     user_input = params.permit(:name, :age, :doc_type, :doc_num, :id_book)
+    id_book = user_input[:id_book]
 
     #  Отправляю патч на '/booking_app'
     client = HTTPClient.new
-    response_of_the_service = client.patch("http://booking_app:3004/bookings/#{user_input[:id_book]}", json: { status: 'bought' })
+    headers = { 'Content-Type' => 'application/json' }
+    response_of_the_service = client.patch("http://booking_app:3004/bookings/#{id_book}", body: { status: 'bought' }.to_json, header: headers)
 
     if response_of_the_service.code == 400
       render json: { result: false, error: 'Извините номер брони не подходит' }, status: :not_found
     else
       booking_data = JSON.parse(response_of_the_service.body, symbolize_names: true)
-      create_guest_and_ticket(booking_data)
+      create_guest_and_ticket(booking_data, user_input)
       #  Отправляем пользователю "привет с данными билета"
     end
   end
@@ -54,7 +56,7 @@ class BuyingController < ApplicationController
 
   private
 
-  def create_guest_and_ticket(booking_data)
+  def create_guest_and_ticket(booking_data, user_input)
     guest = Guest.create(
       id_book: booking_data[:id_book],
       name: user_input[:name], 
