@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2023_10_23_191019) do
 
-  create_table "guests", force: :cascade do |t|
+  create_table "guests", id: :string, force: :cascade do |t|
     t.string "id_book"
     t.string "name"
     t.integer "age"
@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(version: 2023_10_23_191019) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "tickets", force: :cascade do |t|
+  create_table "tickets", id: :string, force: :cascade do |t|
     t.string "id_guest"
     t.string "name"
     t.integer "age"
     t.string "doc_type"
     t.string "doc_num"
-    t.datetime "category"
-    t.datetime "date"
+    t.string "category"
+    # t.date "date"
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

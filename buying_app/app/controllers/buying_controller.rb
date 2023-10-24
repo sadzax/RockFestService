@@ -43,35 +43,29 @@ class BuyingController < ApplicationController
     ticket = Ticket.find_by(id: id_ticket)
 
     #  Отдаю JSON
-    render json: {
-      result: true,
+    render json: {result: true,
       id_ticket: ticket.id,
       name: ticket.name,
       category: ticket.category,
       doc_type: ticket.doc_type,
       doc_num: ticket.doc_num,
-      date: ticket.date.strftime('%Y-%m-%d')
-    }
+      date: ticket.date.strftime('%Y-%m-%d')}
   end
 
   private
 
   def create_guest_and_ticket(booking_data, user_input)
-    guest = Guest.create(
-      id_book: booking_data[:id_book],
+    guest = Guest.create(id_book: booking_data[:id_book],
       name: user_input[:name], 
       doc_type: user_input[:doc_type],
-      doc_num: user_input[:doc_num]
-    )
+      doc_num: user_input[:doc_num])
 
-    Ticket.create(
-      id_guest: guest.id,
+    Ticket.create(id_guest: guest.id,
       name: guest.name,
       doc_type: guest.doc_type,
       doc_num: guest.doc_num,
       category: booking_data[:category],
       date: booking_data[:date],
-      price: booking_data[:price]
-    )
+      price: booking_data[:price])
   end
 end

@@ -8,11 +8,11 @@ class Ticket < ApplicationRecord
     attribute :doc_type, :string
     attribute :doc_num, :string
     attribute :category, :string
-    attribute :date, :datetime
+    # attribute :date, :date
     attribute :price, :integer
 
     #  Создаём UUID
-    after_create :generate_uuid
+    before_create :generate_uuid
     private
     def generate_uuid
       self.id = SecureRandom.uuid
